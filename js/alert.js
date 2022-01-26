@@ -25,5 +25,5 @@ bell.addEventListener('click', e =>{
 
     dot.style.display = 'none';
     alert('test');
-    alert('testing')
+    alert('test')
   });
