@@ -1,0 +1,90 @@
+<div class="traffic">
+  <h2 class="chart-title">Traffic</h2>
+  <div class="btn-container">
+    <input type="radio" name="chart" value="day" class="chart-btn">
+      <button class="chart-btn" type="button" name="hourly">Hourly</button>
+      <button class="chart-btn" type="button" name="daily">Daily</button>
+      <button class="chart-btn" type="button" name="weekly">Weekly</button>
+      <button class="chart-btn" type="button" name="monthly">Monthly</button>
+  </div>
+  <canvas id="lineChart" width="100vw" ></canvas>
+        <script>
+              const line = document.getElementById('lineChart').getContext('2d');
+              const lineChart = new Chart(line, {
+                  type: 'line',
+                  data: {
+                      labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                      datasets: [{
+                          // label: '# of Votes',
+                          data: [12, 19, 53, 5, 12, 38, 24],
+                          backgroundColor: 'rgba(112, 104, 201, .5)',
+                          fill:true,
+                          borderColor: 'rgba(112, 104, 201, .5)',
+                          borderWidth: 1
+                      }]
+                  },
+                  options: {
+                      scales: {
+                          y: {
+                              beginAtZero: true
+                          }
+                      },
+                      plugins:{legend:{display:false}}
+                  }
+              });
+          </script>
+
+        <h2 class="chart-title">Daily Traffic</h2>
+    <canvas id="barChart" width="100vw" ></canvas>
+                <script>
+                      const bar = document.getElementById('barChart').getContext('2d');
+                      const barChart = new Chart(bar, {
+                          type: 'bar',
+                          data: {
+                              labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+                              datasets: [{
+                                  label: '# of Votes',
+                                  data: [12, 19, 53, 5, 12, 38, 24],
+                                  backgroundColor: '#93789c',
+                                  borderColor: '#5f566e',
+                                  borderWidth: 1
+                              }]
+                          },
+                          options: {
+                              scales: {
+                                  y: {
+                                      beginAtZero: true
+                                  }
+                              },
+                              plugins:{legend:{display:false}}
+                          }
+                      });
+                  </script>
+
+                  <h2 class="chart-title">Mobile Users</h2>
+      <canvas id="doughnutChart" width="100vw" ></canvas>
+      <script>
+            const doughnut = document.getElementById('doughnutChart').getContext('2d');
+            const doughnutChart = new Chart(doughnut, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Desktop', 'Tablet', 'Phones'],
+                    datasets: [{
+                        data: [2000, 550, 556],
+                        backgroundColor: [
+                            'rgba(153, 102, 255, 0.6)',
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(54, 162, 235, 0.6)',
+                        ],
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            display:false
+                        }
+                    },
+                    plugins:{legend:{position:'right'}}
+                }
+            });
+</script>
