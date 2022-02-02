@@ -215,11 +215,14 @@ background: #93789c;
     .main{
       grid-template-columns: 50%;
     }
-    .dashboard, #alert, .traffic, .social, .members, .activity, .messages, .settings{
+    .dashboard, #alert, .traffic, .social, #members, .activity, .messages, #settings{
       grid-column: 1 / span 2;
     }
     .daily{
       grid-column: 1 / span 1;
+    }
+    #barChart{
+      margin-top: 15vh;
     }
     .mobile{
       grid-column: 2 / span 1;
@@ -247,7 +250,7 @@ background: #93789c;
       display: flex;
       justify-content: space-around;
     }
-    .members, .activity{
+    #members, .activity{
       padding:0 10px;
     }
     .member-cont{
@@ -269,10 +272,10 @@ background: #93789c;
 
 @media (min-width:1024px){
 
-    .members, .messages{
+    #members, .messages{
       grid-column: 1 / span 1;
     }
-    .activity, .settings{
+    .activity, #settings{
       grid-column: 2 / span 1;
     }
 .social-container{
