@@ -129,14 +129,20 @@ section{
   justify-content: space-around;
 }
 .traffic-nav-link{
-  color: white;
-  background-color: lightgreen;
-  border-radius: 25px;
-  border: 0px;
   height: 30px;
   width: 20%;
   font-size: 25px;
   text-align: center;
+}
+input[type='radio']:checked + label{
+  color: white;
+  background-color: lightgreen;
+  border-radius: 25px;
+  border: 0px;
+  padding: 5px;
+}
+.radio{
+  display: none;
 }
 .member-cont{
   display: flex;
