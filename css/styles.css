@@ -127,11 +127,12 @@ section{
   list-style: none;
   display: flex;
   justify-content: space-around;
+  gap:10px;
 }
 .traffic-nav-link{
   height: 30px;
   width: 20%;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
 }
 input[type='radio']:checked + label{
@@ -148,6 +149,14 @@ input[type='radio']:checked + label{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.mem-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arrow{
+  display: none;
 }
 .member-pic{
   border-radius: 50%;
@@ -235,6 +244,7 @@ background: #93789c;
     }
     .traffic-nav{
       justify-content: flex-end;
+      margin-right: 20px;
     }
     .traffic-nav-link{
       width: 10%;
@@ -266,6 +276,11 @@ background: #93789c;
     }
     .mem-text{
       margin-right: auto;
+      display: block;
+      margin-left: 15px;
+    }
+    .arrow{
+      display: block;
     }
     .toggle-container{
       width: 50%;
